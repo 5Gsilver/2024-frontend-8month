@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<article>
+		<h1 id="title"></h1>
+		<p id="content"></p>
+	</article>
+
+	<script type="module">
+		/*
+			1.다음의 url을 호출해서 데이터를 가져오세요.
+			2.가져온 데이터를 ,article의 내용을 채워 주세요.
+		*/
+		const url ='https://jsonplaceholder.typicode.com/posts/1'
+		const response = await fetch(url)
+		const data = await response.json()
+
+		const titleDOM = document.getElementById('title')
+		const contentDOM = document.getElementById('content')
+
+		titleDOM.innerText = data.title
+		contentDOM.innerText = data.body
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+#calculator {
+  width: 464px;
+  height: 640px;
+  border: 1px solid black;
+  border-radius: 15px 15px;
+  box-shadow: 5px 5px 20px;
+}
+
+#calculator .value .box1 {
+  background: rgb(254, 85, 77);
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+
+}
+
+#calculator .value .box2 {
+  background: rgb(253, 180, 40);
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+#calculator .value .box3 {
+  background: rgb(37, 191, 55);
+  width: 20px;
+  height: 20px;
+	border-radius: 100%;
+}
+
+#calculator .value .value1 {
+	justify-content: flex-end;
+}
+
+.value {
+  width: 100%;
+  height: 30%;
+  text-align: right;
+  padding: 10px;
+  font-size: 100px;
+  background: rgb(67, 66, 64);
+  color: white;
+	display: inline-flex;
+}
+
+#calculator .button {
+  display: inline-flex;
+  width: 100%;
+  height: 14%;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+#calculator .button p {
+  width: 25%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: #f0f0f0;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0;
+}
+#calculator .button .number {
+  background: rgb(113, 113, 111);
+  color: white;
+}
+
+#calculator .button .operator {
+  background: rgb(255, 149, 12);
+  color: white;
+}
+
+#calculator .button .tool {
+  background: rgb(104, 99, 95);
+  color: white;
+}
+
+#calculator .button .zero {
+  background: rgb(113, 113, 111);
+  width: 50%;
+  color: white;
+}
