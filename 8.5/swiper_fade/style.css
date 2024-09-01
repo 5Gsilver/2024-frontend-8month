@@ -1,0 +1,50 @@
+@charset 'utf-8';
+/*reset*/
+*{ margin:0px; padding:0px}
+ul,ol,li{ list-style:none; }
+a{text-decoration:none; } 
+
+
+.swiper{
+  width: 600px; 
+  height: 300px; 
+  border: 1px solid #000;
+  margin: 100px auto; 
+  position: relative; 
+}
+
+.swiper .swiper-wrapper{
+  width: 100%; height: 100%; 
+}
+.swipe .swiper-wrapper .swiper-slide{
+  width: 100%; height: 100%; 
+}
+
+.box1{
+  background: pink;
+}
+.box2{
+  background: lightblue;
+}
+.box3{
+  background: lightgreen;
+}
+.box4{
+  background: orange;
+}
+
+.auto{
+  position: absolute; 
+  bottom: 20px; left: 20px;
+  z-index: 10; 
+}
+.auto li{
+  width: 80px; height: 20px; 
+  float: left; margin-right: 20px; 
+  color: #fff; text-align: center; 
+  font:12px/20px '맑은고딕'; 
+  cursor: pointer; 
+}
+
+.auto .btnStart{ background: blue;}
+.auto .btnStop{ background: red;}

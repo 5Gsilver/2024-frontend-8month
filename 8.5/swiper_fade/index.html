@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>swiper basic</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 슬라이드 감싸는 전체 container  -->
+    <div class="swiper">
+      <!-- 슬라이드 패널 감싸는 container  -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide box1"></div>
+        <div class="swiper-slide box2"></div>
+        <div class="swiper-slide box3"></div>
+        <div class="swiper-slide box4"></div>
+      </div>
+      <!-- 좌우버튼  -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- 페이징버튼  -->
+      <div class="swiper-pagination"></div>
+      <!-- 자동재생/정지버튼  -->
+      <ul class="auto">
+        <li class="btnStart">롤링시작</li>
+        <li class="btnStop">롤링정지</li>
+      </ul>
+    </div>
+
+
+    <script>
+      let swiper = new Swiper('.swiper',{
+        spaceBetween:30, //패널사이 간격 
+        slidesPerView:"auto", //화면에 보일 패널 갯수 
+        centeredSlides:true, //활성화패널 화면가운데 배치 
+        grabCursor:true, //슬라이드시 마우스모양변경  
+        loop:true, //슬라이딩순환여부 
+        speed:500, //슬라이딩 속도 
+        effect:"fade", //fade 효과 설정 
+        navigation:{ //좌우버튼 설정 
+          nextEl: ".swiper-button-next", 
+          prevEl: ".swiper-button-prev"
+        }, 
+        pagination:{ //페이징 버튼 설정  
+          el:".swiper-pagination", 
+          clickable:true
+        },
+        autoplay:{ //자동롤링
+          delay:2500, 
+          disableOnInteraction: true 
+          //자동롤링중에 사용자의 인터렉션이 일어나면 자동롤링을 계속할지 true일때는 disable 자동롤링 안됨 
+          // false - 자동롤링을 계속유지 
+        }
+      })
+
+      //btnStart btnStop버튼을 변수로 저장 
+      const btnStart = document.querySelector(".btnStart"); 
+      const btnStop = document.querySelector(".btnStop"); 
+
+      //페이지가 로딩되었을 때 자동롤링이 정지된 상태로 시작 
+      swiper.autoplay.stop(); 
+
+      //btnStart버튼을 클릭하면 
+      btnStart.addEventListener("click", ()=>{
+        //swiper의 자동재생기능이 play 
+        swiper.autoplay.start(); 
+      })
+
+      //btnStop버튼을 클릭하면 
+      btnStop.addEventListener("click",()=>{
+        //swiper의 자동재생기능이 정지 
+        swiper.autoplay.stop(); 
+      })
+
+
+    </script>
+</body>
+</html>

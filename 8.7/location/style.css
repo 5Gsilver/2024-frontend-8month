@@ -1,0 +1,53 @@
+@charset 'utf-8';
+/*reset*/
+*{ margin:0px; padding:0px}
+ul,ol,li{ list-style:none; }
+a{text-decoration:none; } 
+
+section{
+  display: flex; 
+  justify-content: space-between;
+  flex-wrap:wrap; 
+}
+#map{
+  width: 100%; 
+  height: 500px; 
+  margin: 50px auto;
+  background: #aaa;
+}
+/* 교통정보 보기 버튼*/
+.traffic{
+   margin-left: 20px; 
+  display: flex; 
+  gap:20px; 
+}
+.traffic li a{
+  display: block; 
+  width: 200px; height: 40px; 
+  background: #555; 
+  font:bold 12px/40px "맑은 고딕";
+  color: #fff; 
+  text-align: center;
+  border: 1px solid #555;
+}
+.traffic li.on a{
+  background: #fff; color: #555;
+}
+
+.branch{
+  display:flex;
+  gap:20px; 
+  margin-right: 20px;
+}
+.branch li a{
+  display: block; 
+  width: 200px; height: 40px; 
+  background: #555; 
+  font:bold 12px/40px "맑은 고딕";
+  color: #fff; 
+  text-align: center;
+  border: 1px solid #555;
+}
+.branch li.on a{
+  background: #fff; color: #555;
+}

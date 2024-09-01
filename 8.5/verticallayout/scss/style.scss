@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import 'reset.scss'; 
+
+body{
+  background: #efefef;
+}
+
+header{
+  width:400px; height:100vh; 
+  position: fixed; top: 0; left: 0; 
+  background: linear-gradient(45deg, aqua, royalblue);
+  //제목 
+  h1{
+    font:bold 50px/1 'Orbitron'; 
+    color:#fff; 
+    letter-spacing:1px; 
+    position: absolute; 
+    top:50%; left:50px;  
+    transform:translateY(-150%); 
+    //제목하단 텍스트 
+    &::before{
+      content:'UI/UX DEVELOPEMENT'; 
+      display: block; 
+      font:14px/1 'Orbitron'; color:#fff; 
+      letter-spacing: 2px;
+      position: absolute; 
+      left: 0; top: 140px;
+      opacity:0.8;  
+    }
+    //제목하단 라인 
+    &::after{
+      content:''; 
+      display: block; 
+      width: 140px; height: 2px; 
+      background: #fff;  
+      margin-top: 40px;
+    }
+  }
+
+  ul{
+    position: absolute; bottom: 100px; left: 50px;
+
+    li{
+      float:left; margin-right: 10px; 
+
+      a{
+        font-size:20px; color:#fff; 
+
+        span{
+          //transform적용하기위해서 block처리하면 줄바꿈되므로 inline-block으로 처리 
+          display:inline-block;
+          //글씨크기 줄이고 아이콘옆으로 살짝 이동
+          transform:scale(0.7) translateX(-10px);
+          opacity:0.7; 
+        }
+      }
+    }
+  }
+}
+main{
+  margin-left: 400px;
+  padding:20px; 
+
+  //분류버튼 
+  .btns{
+    display: flex; gap: 10px;
+    justify-content: flex-end;
+
+    li {      
+        a{ 
+          display: block;
+          padding: 10px; 
+          font:bold 7px/1 'Orbitron'; 
+          color:#aaa;  
+          background: #fff; 
+          border-radius: 5px; 
+          box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+      }
+      //li에 on이 붙어 활성화되었을때 a태그상태 
+      &.on a{
+        background: linear-gradient(45deg, aqua, royalblue);
+        color:#fff; 
+        box-shadow: 0px 0px 5px rgba(0, 255, 255, 0.5);
+      }
+    
+    }
+  }
+
+
+  section{
+    width:100%; 
+    
+    article{
+      width: 25%; float:left; 
+      padding: 12px; 
+
+      div{
+        width: 100%; 
+        background: #fff;
+        border-radius: 4px;
+        box-shadow:5px 5px 10px rgba(0,0,0,.1); 
+        padding: 14px;
+
+        img{
+          width: 100%;
+        }
+        h2{
+          margin-top: 15px; 
+          margin-bottom: 5px; 
+          font:bold 11px/1 'Orbitron'; 
+          letter-spacing: 1px;
+          color:#444;  
+        }
+        p{
+          font:10px/1.2 'arial'; color: #777;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+//위쪽 원본은 1600px이상인 브라우저에서 실행 
+
+//최대너비가 1599px인 브라우저크기까지는 
+//안쪽의 코드 실행 
+@media screen and (max-width:1599px){
+  header{
+    width:350px; 
+
+    ul li{
+      margin-right: 0;
+    }
+  }
+  main{
+    margin-left:350px; 
+  }
+}
+
+@media screen and (max-width:1199px){
+  header{
+    width: 100%; height:80px; 
+    position: relative; 
+
+    h1{
+      font:bold 24px/1 'Orbitron'; 
+      transform: translateY(-50%);
+      //header높이가 작아져서 꾸밈부분은 안보이게 처리 
+      &::before{ display: none; }
+      &::after{ display: none; }
+    }
+    //sns 리스트 
+    ul{
+      right:50px; bottom:25px; 
+      left:auto; //원본에서 지정했던 left값 초기화
+
+      li{
+        margin-right: 20px; 
+        a{
+          span{ display: none;} 
+          //텍스트 안보이게 처리
+        }
+      }
+    }
+  }
+  main{
+    margin-left:0; 
+  }
+}
+
+@media screen and (max-width:899px){
+  main section article{ width:33.333%;}
+}
+
+@media screen and (max-width:699px){
+  main section article{ width:50%;}
+}
+
+@media screen and (max-width:539px){
+  main section article{ width:100%;}
+
+  header ul { display: none; }
+}

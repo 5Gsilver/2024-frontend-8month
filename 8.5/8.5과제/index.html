@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isotope Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<style>
+		body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+}
+
+.button-group {
+    margin-bottom: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.element-item {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: #8bc34a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+	</style>
+    <div class="container">
+        <div class="grid">
+            <div class="element-item category1"><p>Item 1</p></div>
+            <div class="element-item category2"><p>Item 2</p></div>
+            <div class="element-item category1 category2"><p>Item 3</p></div>
+            <div class="element-item category3"><p>Item 4</p></div>
+            <div class="element-item category2"><p>Item 5</p></div>
+            <div class="element-item category1"><p>Item 6</p></div>
+						<div class="element-item category2"><p>Item 7</p></div>
+						<div class="element-item category2"><p>Item 8</p></div>
+						<div class="element-item category2"><p>Item 9</p></div>
+						<div class="element-item category2"><p>Item 10</p></div>
+						<div class="element-item category2"><p>Item 11</p></div>
+						<div class="element-item category2"><p>Item 12</p></div>
+						<div class="element-item category2"><p>Item 13</p></div>
+						<div class="element-item category2"><p>Item 14</p></div>
+						<div class="element-item category2"><p>Item 15</p></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>swiper basic</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 전체 swiper 감싸는 영역 -->
+  <div class="swiper mySwiper">
+    <!-- swiper-wrapper는 slide 감싸는 영역  -->
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>     
+    </div>
+
+    <!-- 이전버튼 이후버튼  -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- 페이징 버튼 -->
+    <div class="swiper-pagination"></div>
+    <!-- 스크롤바  -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+  <script>
+    let swiper = new Swiper(".mySwiper", {
+      direction: "horizontal", //슬라이딩 방향 horizontal/vertical
+      spaceBetween:20, //슬라이드 사이간격 
+      slidesPerView: 1, //화면에 보일 패널갯수 숫자, "auto"
+      centeredSlides: true, //활성화패널을 화면가운데 배치 
+      loop: true, //슬라이딩 순환여부 결정 
+      mousewheel: true, //마우스휠로 패널이동 
+      keyboard: true, //키보드 좌우버튼으로 패널 이동 
+      grabCursor: true, //스와이프시 마우스커서모양 손가락으로 변경
+      navigation: { //좌우버튼 옵션
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: { //페이징 버튼 옵션 
+        el: ".swiper-pagination",
+        // dynamicBullets: true, //다이내믹효과 페이징버튼
+        //type: "progressbar", //progressbar 효과 페이징 버튼
+        //type: "fraction",  //현재페이지/전체페이지수 페이징 버튼 
+        clickable: true, //페이징버튼 클릭가능유무 
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+    });
+   </script>
+</body>
+</html>

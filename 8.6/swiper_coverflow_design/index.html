@@ -1,0 +1,139 @@
+	<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>swiper coverflow design</title>
+	<!-- fontawesome cdn -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- swiper cdn 파일 연결 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+	<!-- 
+	swiper cdn import 
+	google font - orbitron roboto 폰트 import 
+	fontawesome cdn import 
+	-->
+
+	<section class="gallery">
+		<h1>UI/UX <span>PORTFOLIO</span></h1>
+
+		<!-- 자동롤링 버튼  -->
+		<ul class="auto">
+			<li class="btnStart">
+				<i class="fas fa-play"></i>
+			</li>
+			<li class="btnStop">
+				<i class="fas fa-pause"></i>
+			</li>
+		</ul>
+
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic1.png" alt="">
+						<h2>Lorem ipsum dolor sit.</h2>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, quisquam.</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic2.png" alt="">
+						<h2>Lorem ipsum dolor sit.</h2>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, quisquam.</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic3.png" alt="">
+						<h2>Lorem ipsum dolor sit.</h2>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, quisquam.</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic4.png" alt="">
+						<h2>Lorem ipsum dolor sit.</h2>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, quisquam.</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic5.png" alt="">
+						<h2>Lorem ipsum dolor sit.</h2>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, quisquam.</p>
+					</div>
+				</div>
+			</div>
+		</div> 
+		<!-- .swiper-wrapper end  -->
+
+		<!-- 좌우버튼  -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+
+		<!-- 페이징 버튼  -->
+		<div class="swiper-pagination"></div>
+	</section>
+
+	<script>
+		let swiper = new Swiper('.gallery',{
+			effect:'coverflow', 
+			coverflowEffect:{
+				rotate: 50, //슬라이드 회전각 
+				stretch: -100, //슬라이더간 거리 
+				depth: 400, //깊이 효과값 
+				modifier:1, //효과 배수 
+				slideShadow :false //슬라이더 그림자 
+			}, 
+			loop:true,
+			slidesPerView:'auto', 
+			centeredSlides:true, //화면가운데 패널배치 
+			speed:1000, 
+			grabCursor:true, 
+			pagination:{ //페이징버튼 - 현재패널/전체패널수
+				el:'.swiper-pagination', 
+				type:'fraction'
+			}, 
+			navigation:{ //좌우버튼 
+				nextEl:'.swiper-button-next', 
+				prevEl:'.swiper-button-prev'
+			}, 
+			autoplay:{ //자동롤링 설정 
+				delay:1000, 
+				disableOnInteraction:true
+			}
+
+		})
+
+		//자동롤링 버튼 변수로 저장 
+		const btnStart = document.querySelector(".btnStart"); 
+		const btnStop = document.querySelector(".btnStop"); 
+
+		//페이지 로딩시에는 autoplay가 정지된 상태로 
+		swiper.autoplay.stop(); 
+
+		//start버튼을 클릭했을때 
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start(); //autoplay시작  
+		}); 
+		//stop버튼 클릭했을 때 
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop(); //autoplay 정지  
+		})
+	</script>
+	</body>
+	</html>

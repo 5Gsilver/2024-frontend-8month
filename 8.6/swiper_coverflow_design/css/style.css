@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gallery {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(45deg, mediumpurple, aqua);
+  position: relative;
+}
+.gallery h1 {
+  font: normal 24px/1 "Orbitron";
+  color: #fff;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 50px;
+  top: 70px;
+}
+.gallery h1 span {
+  color: #eee;
+}
+.gallery .auto {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+}
+.gallery .auto li {
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0.9;
+  transition: all 0.5s;
+}
+.gallery .auto li:hover {
+  opacity: 1;
+  transform: scale(1.4);
+}
+.gallery .swiper-button-prev {
+  left: auto;
+  top: auto;
+  right: 100px;
+  bottom: 50px;
+  filter: grayscale(100%) brightness(3);
+  transform: scale(0.5);
+}
+.gallery .swiper-button-next {
+  left: auto;
+  top: auto;
+  right: 60px;
+  bottom: 50px;
+  filter: grayscale(100%) brightness(3);
+  transform: scale(0.5);
+}
+.gallery .swiper-pagination-fraction {
+  bottom: auto;
+  left: auto;
+  width: auto;
+  top: 50px;
+  right: 50px;
+  font-size: 16px;
+  font-family: "Orbitron";
+  color: #eee;
+  letter-spacing: 1px;
+}
+.gallery .swiper-pagination-fraction .swiper-pagination-current {
+  font-size: 30px;
+  color: #fff;
+}
+.gallery .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.gallery .swiper-wrapper .swiper-slide {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  top: 50%;
+  margin-top: -230px;
+}
+.gallery .swiper-wrapper .swiper-slide .inner {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 30px;
+  opacity: 0.4;
+  transition: 1s;
+}
+.gallery .swiper-wrapper .swiper-slide .inner .con {
+  position: relative;
+}
+.gallery .swiper-wrapper .swiper-slide .inner .con img {
+  width: 100%;
+}
+.gallery .swiper-wrapper .swiper-slide .inner .con h2 {
+  font-weight: normal;
+  font-size: 40px;
+  font-family: "roboto";
+  color: #111;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.gallery .swiper-wrapper .swiper-slide .inner .con h2::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: #888;
+  margin-top: 15px;
+  transition: 1s 0.5s;
+}
+.gallery .swiper-wrapper .swiper-slide .inner .con p {
+  font-size: 13px;
+  line-height: 1.3;
+  font-family: arial;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+.gallery .swiper-wrapper .swiper-slide .inner::before, .gallery .swiper-wrapper .swiper-slide .inner::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  opacity: 0;
+}
+.gallery .swiper-wrapper .swiper-slide-prev .inner,
+.gallery .swiper-wrapper .swiper-slide-next .inner {
+  opacity: 0.7;
+}
+.gallery .swiper-wrapper .swiper-slide-active .inner {
+  opacity: 1;
+  box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.8);
+}
+.gallery .swiper-wrapper .swiper-slide-active .inner .con h2::after {
+  width: 100px;
+  background: orange;
+}
+.gallery .swiper-wrapper .swiper-slide-active .inner::before {
+  animation: ani 1s ease 1;
+}
+.gallery .swiper-wrapper .swiper-slide-active .inner::after {
+  animation: ani 1s ease 0.3s 1;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  1% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

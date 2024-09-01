@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>swiper coverflow</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 슬라이드 감싸는 전체 container  -->
+    <div class="swiper">
+      <!-- 슬라이드 패널 감싸는 container  -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide box1"></div>
+        <div class="swiper-slide box2"></div>
+        <div class="swiper-slide box3"></div>
+        <div class="swiper-slide box4"></div>
+        <div class="swiper-slide box5"></div>
+        <div class="swiper-slide box6"></div>
+      </div>
+      <!-- 좌우버튼  -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- 페이징버튼  -->
+      <div class="swiper-pagination"></div>
+
+      <!-- 자동재생/정지버튼  -->
+      <ul class="auto">
+        <li class="btnStart">롤링시작</li>
+        <li class="btnStop">롤링정지</li>
+      </ul>
+
+    </div>
+
+
+    <script>
+    var swiper = new Swiper(".swiper", { //슬라이드 전체 컨테이너명 
+      effect: "coverflow", //coverflow효과 슬라이더 
+      grabCursor: true, //슬라이딩시 마우스모양 변경 
+      centeredSlides: true, //슬라이딩시 화면가운데 슬라이드패널 배치 
+      slidesPerView: "auto", //한 화면에 배치할 슬라이드패널 수 
+      coverflowEffect: { //coverflow효과 옵션값 
+        rotate: 50, //슬라이드 회전각도 클수록 회전 커짐 
+        stretch: 0, //슬라이드 간 거리 - 클수록 많이 겹침 
+        depth: 200,//깊이효과값 - 클수록 멀리있는 느낌 
+        modifier: 1, //효과 배수 
+        slideShadows: true, //슬라이더 그림자 
+      },
+      pagination: { //페이징 버튼 
+        el: ".swiper-pagination",
+        clickable : true // 버튼 클릭으로 패널 이동 
+      },
+      loop :true, //슬라이딩 순환 
+      speed : 500, // 슬라이딩 속도 
+      navigation:{ // 좌우 버튼 
+        nextEl:".swiper-button-next", 
+        prevEl:".swiper-button-prev"
+      }
+    });  
+
+    //자동롤링 버튼 변수로 저장 
+    const btnStart = document.querySelector(".btnStart"); 
+    const btnStop = document.querySelector(".btnStop"); 
+
+    //페이지가 로딩되었을때 자동롤링 정지된 상태 
+    swiper.autoplay.stop(); 
+
+    //btnStart버튼을 클릭했을 때 
+    btnStart.addEventListener("click",()=>{
+      swiper.autoplay.start(); //자동롤링 시작 
+    }); 
+
+    //btnStop버튼 클릭했을 때 
+    btnStop.addEventListener("click", ()=>{
+      swiper.autoplay.stop(); //자동롤링 정지 
+    })
+
+    </script>
+</body>
+</html>

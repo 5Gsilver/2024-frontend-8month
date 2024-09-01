@@ -1,0 +1,65 @@
+@charset 'utf-8';
+/*reset*/
+*{ margin:0px; padding:0px; box-sizing: border-box;}
+ul,ol,li{ list-style:none; }
+a{text-decoration:none; }
+
+section{
+  width: 100%; 
+  padding:150px 0 150px; 
+}
+section .inner{
+  width:1200px; 
+  margin:0 auto; 
+}
+section .inner h1{
+  font:normal 40px/1 'arial'; 
+  color:#555; 
+}
+
+section .inner .vidList{
+  width:100%; 
+  display: flex; 
+  flex-wrap:wrap; 
+  gap:20px; 
+  justify-content: space-between;
+}
+
+section .inner .vidList article{
+  width: 580px; 
+}
+section .inner .vidList article a{
+  width: 100%; 
+}
+section .inner .vidList article a img{
+  width: 100%; 
+}
+section .inner .vidList article .con h2{
+  font:bold 20px/1 'arial'; 
+  color:#555; 
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+section .inner .vidList article .con p{
+  font:12px/1.3 'arial'; color:#888; 
+
+}
+section .inner .vidList article .con span{
+  font:12px/1 'arial'; color:orange; 
+}
+
+.pop{
+  width: 100%; 
+  height: 100vh; 
+  background: #111;
+  position: fixed; 
+  left: 0; top: 0; 
+}
+.pop .btnClose{
+  position: absolute; 
+  top: 50px; right: 50px; 
+  font-size: 24px;
+  color:#fff; 
+}
+
+
