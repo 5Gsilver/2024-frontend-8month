@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>JOIN</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+<script src="form_validation.js" defer></script>
+</head>
+<body>
+<section class="join">
+  <div class="inner">
+    <h1>JOIN
+      <span>회원가입</span>
+    </h1>
+
+    <form action="result.html" method="get" id="member">
+      <fieldset>
+        <legend class="h">회원가입양식폼</legend>
+
+        <h2><label for="terms">Terms & Policy</label></h2>
+        <textarea name="terms" id="terms" spellcheck="false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vero vel voluptate harum nulla asperiores distinctio excepturi molestiae totam? Magnam, tenetur quis explicabo earum iure corporis velit consequatur. Totam quisquam ipsa tempore tenetur commodi voluptatibus! Aut dolor sunt optio, perferendis nihil repellat in error dicta id sit amet architecto beatae nulla, obcaecati harum iste voluptas voluptatem expedita illo cum. Ad esse ipsa maiores illum animi dicta deserunt sint voluptatibus ducimus sunt eaque saepe blanditiis laudantium neque architecto, tenetur aut pariatur unde! Eveniet id aspernatur beatae pariatur magnam aperiam sequi quia saepe magni! Exercitationem, magni deleniti fugiat sint ab vero! Eveniet!
+        </textarea>
+        <div class="agreement">
+          <input type="checkbox" name="agree" id="agree" >
+          <label for="agree">약관에 동의합니다.</label>
+        </div>
+
+        <h2>MEMBER INFORMATION</h2>
+
+        <table>
+
+          <caption>회원정보입력양식테이블</caption>
+
+          <tr>
+
+            <th scope="row">
+              
+              <label for="id">USER ID </label>
+            
+            </th>
+
+            <td>
+
+              <input type="text" name="id" id="id" placeholder="아이디를 입력하세요" required>
+
+            </td>
+
+          </tr>
+
+          <tr>
+            <th scope="row"><label for="pwd1">PASSWORD</label></th>
+            <td>
+              <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요" required>
+              <i class="far fa-eye-slash" id="eye"></i>
+              <!-- <i class="far fa-eye" id="eye"></i> -->
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="pwd2">RE-PASSWORD</label></th>
+            <td><input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력하세요"></td>
+          </tr>
+          <tr>
+            <th scope="row">HOBBY</th>
+            <td>
+              <label for="game">
+                <input type="checkbox" name="hobby" id="game" value="game">GAME
+              </label>
+              <label for="music">
+                <input type="checkbox" name="hobby" id="music" value="music">MUSIC
+              </label>
+              <label for="reading">
+                <input type="checkbox" name="hobby" id="reading" value="reading">READING
+              </label>
+             
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">GENDER</th>
+            <td>
+              <label for="male">
+                <input type="radio" name="GENDER" id="male" value="male"> MALE
+              </label>
+              <label for="female">
+                <input type="radio" name="GENDER" id="female" value="female"> FEMALE
+              </label>
+              <p>성별을 선택해 주세요</p>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row"><label for="edu">Education</label></th>
+            <td>
+              <select name="edu" id="edu">
+                <option value="" disabled selected>학력을 선택하세요</option>
+                <option value="elementary">초등학교 졸업</option>
+                <option value="middle school">중학교 졸업</option>
+                <option value="high school">고등학교 졸업</option>
+                <option value="college">대학교 졸업</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+
+            <th scope="row">
+              <label for="email">E-MAIL</label>
+            </th>
+
+            <td>
+              <input type="text" name="email" id="email" placeholder="이메일주소를 입력해 주세요">
+            </td>
+            
+          </tr>
+
+          <tr>
+            <th scope="row">
+              <label for="comments">COMMENTS</label>
+            </th>
+            <td>
+              <textarea name="comments" id="comments" placeholder="코멘트를 입력해 주세요"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="2">
+              <input type="reset" value="CANCEL">
+              <input type="submit" value="SUBMIT">
+            </th>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </div>
+</section>
+</body>
+</html>

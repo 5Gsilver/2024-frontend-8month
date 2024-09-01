@@ -1,0 +1,61 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.del, .view {
+  display: inline-block;
+  padding: 10px 30px;
+  font: bold 14px/1 "맑은 고딕";
+  color: #fff;
+  margin: 50px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+#popup {
+  width: 500px;
+  padding: 40px;
+  background: lightblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  display: none;
+}
+
+#popup .content {
+  width: 100%;
+  min-height: 150px;
+  font: 30px/1 "맑은 고딕";
+  color: #fff;
+}
+
+#popup .check {
+  display: flex;
+  align-items: center;
+}
+
+#popup .check label {
+  color: #fff;
+}
+
+#popup .check .close {
+  color: #fff;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */

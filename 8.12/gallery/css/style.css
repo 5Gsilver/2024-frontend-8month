@@ -1,0 +1,140 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  width: 100%;
+  padding: 100px 0;
+}
+section .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+section .inner h1 {
+  font: normal 50px/1 "aria";
+  color: #555;
+}
+section .inner #gallery #searchBox {
+  width: 100%;
+  padding: 50px 0;
+  font-size: 0;
+  text-align: right;
+}
+section .inner #gallery #searchBox #search {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #333;
+  padding-left: 10px;
+}
+section .inner #gallery #searchBox #search .btnSearch {
+  width: 80px;
+  height: 30px;
+  background: #333;
+  font: bold 12px/30px arial;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  vertical-align: top;
+}
+section .inner #gallery #searchBox #search p {
+  font: 12px/1 "맑은 고딕";
+  color: hotpink;
+  margin-top: 10px;
+}
+section .inner #gallery #wrap {
+  width: 100%;
+}
+section .inner #gallery #wrap .loading {
+  width: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+}
+section .inner #gallery #wrap .loading.off {
+  opacity: 0;
+}
+section .inner #gallery #list {
+  width: 100%;
+  opacity: 1;
+  transform: translateY(100px);
+  transition: 1s;
+}
+section .inner #gallery #list.on {
+  opacity: 1;
+  transform: translate(0);
+}
+section .inner #gallery #list article {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+section .inner #gallery #list article > div {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+section .inner #gallery #list article > div a {
+  display: block;
+  width: 100%;
+}
+section .inner #gallery #list article > div a > img {
+  width: 100%;
+  filter: grayscale(100%);
+}
+section .inner #gallery #list article > div h2 {
+  width: 100%;
+  font: bold 12px/1 arial;
+  color: #555;
+  margin-top: 10pxs;
+}
+section .inner #gallery #list article > div p {
+  width: 100%;
+  font: 12px/1 "arial";
+  color: #888;
+  margin-top: 10px;
+}
+section .inner #gallery #list article > div div {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+}
+section .inner #gallery #list article > div div .profile {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+section .inner #gallery #list article > div div strong {
+  font: normal 1px/1 "arial";
+  color: orange;
+  margin-left: auto;
+}
+section .inner #gallery #list article:hover a > img {
+  filter: grayscale(0);
+}
+section .inner #gallery #list p {
+  font: 24px/1;
+  color: #555;
+}
+
+/*# sourceMappingURL=style.css.map */
